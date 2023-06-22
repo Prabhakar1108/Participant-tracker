@@ -1,0 +1,32 @@
+Started GET "/" for ::1 at 2023-06-22 19:48:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registries/index.html.erb within layouts/application
+  [1m[36mRegistry Load (0.2ms)[0m  [1m[34mSELECT "registries".* FROM "registries"[0m
+  ↳ app/views/registries/index.html.erb:17
+  Rendered registries/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 6968)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 23580)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.4ms | Allocations: 33521)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:4
+Started GET "/" for ::1 at 2023-06-22 19:50:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registries/index.html.erb within layouts/application
+  [1m[36mRegistry Load (0.1ms)[0m  [1m[34mSELECT "registries".* FROM "registries"[0m
+  ↳ app/views/registries/index.html.erb:17
+  Rendered registries/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 6712)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 18898)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms | Allocations: 26049)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:4

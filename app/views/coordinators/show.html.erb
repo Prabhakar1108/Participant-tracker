@@ -1,0 +1,6 @@
+<h1><%= @coordinator.name %> Details</h1>
+<p>Email: <%= @coordinator.email %></p>
+<p>Phone Number: <%= @coordinator.phone_number %></p>
+
+<h2>Enroll Participant</h2>
+<%= link_to "Enroll Participant", new_registry_coordinator_enrollment_path(@registry, @coordinator) , class: 'btn btn-sm btn-primary' %>

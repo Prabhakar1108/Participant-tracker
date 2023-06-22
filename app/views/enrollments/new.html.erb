@@ -1,0 +1,28 @@
+<h1>New Enrollment</h1>
+
+<%= form_with(model: [@registry, @coordinator, @enrollment], url: registry_enrollments_path(@registry, @coordinator), local: true) do |form| %>
+  <div class="field">
+    <%= form.label :participant_id %>
+    <%= form.collection_select :participant_id, @participants, :id, :name %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :date_of_enrollment %>
+    <%= form.date_field :date_of_enrollment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :method_of_contact %>
+    <%= form.select :method_of_contact, ["phone", "email"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remarks %>
+    <%= form.text_area :remarks %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Enroll Participant" %>
+  </div>
+<% end %>

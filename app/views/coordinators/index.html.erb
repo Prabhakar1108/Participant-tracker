@@ -1,0 +1,10 @@
+<h1>Coordinators</h1>
+<ul>
+  <% @coordinators.each do |coordinator| %>
+    <li>
+      <%= link_to coordinator.name, coordinator_path(coordinator) %>
+      - <%= coordinator.email %>
+      - <%= coordinator.phone_number %>
+    </li>
+  <% end %>
+</ul>

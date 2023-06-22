@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <h3>Registries</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">State</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @registries.each do |registry| %>
+              <tr>
+                <th scope="row">1</th>
+                <td><%= link_to registry.name, registry_path(registry) %></td>
+                <td><%= registry.location %></td>
+                <td><%= registry.status %></td>
+                <td><%= registry.status %></td>
+                <td>
+                  <%= link_to 'View Participants', registry_participants_path(registry), class: 'btn btn-sm btn-primary' %>
+                  <%= link_to"add coordinator",new_registry_coordinator_path(registry), class: 'btn btn-sm btn-secondary' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= link_to"add the registry",new_registry_path, class: 'btn btn-sm btn-primary' %>
+    </div>
+  </div>
+</div>

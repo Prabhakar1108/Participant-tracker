@@ -1,0 +1,10 @@
+<h1>Participants for <%= @registry.name %></h1>
+<% @participants.each do |coordinator, participants| %>
+  <h3><%= coordinator.name %></h3>
+  <ul>
+    <% participants.each do |participant| %>
+      <li><%= participant.name %> - <%= participant.gender %> - <%= participant.date_of_birth %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to "Export Participants", export_participants_path(format: :csv) %>

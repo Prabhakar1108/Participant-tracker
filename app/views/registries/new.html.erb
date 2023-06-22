@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h3>New Registry</h3>
+      <%= form_with model: @registry, url: registries_path, local: true do |form| %>
+
+        <div class="mb-3">
+          <%= form.label :name, class: 'form-label' %>
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.label :location, class: 'form-label' %>
+          <%= form.text_field :location, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.label :state, class: 'form-label' %>
+          <%= form.text_field :state, class: 'form-control' %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.select :status, Registry.statuses.keys.map { |r| [r.humanize.capitalize, r] }, {}, class: 'form-select' %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.submit "Create Registry", class: 'btn btn-primary' %>
+        </div>
+       <% end %>
+    </div>
+  </div>
+</div>
